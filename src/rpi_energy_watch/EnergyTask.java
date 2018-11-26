@@ -21,10 +21,10 @@ import rpio_client.Net_RPI_IO;
  */
 public class EnergyTask {
     
-    private static final int MAINS = 6;
-    private static final int GENERATOR = 7;
-    private static final int TVSS = 8;
-    private static final int GEN_RUNNING = 1;
+    private static final int MAINS = 6; //Input port on RPI
+    private static final int GENERATOR = 7; //Input port on RPI
+    private static final int TVSS = 8; //Input port on RPI
+    private static final int GEN_RUNNING = 1; //Output relay on RPI
     public static final int ENERGYTASK = 2;
     public static final int TASKLEVEL = 1;
     

@@ -97,6 +97,10 @@ public class RPI_Energy_Watch {
             case "get status":
                 reply=getStatus();
                 break;
+            
+            case "reset monitor":
+                reply=energy.reset_power();
+                break; 
                 
             case "kill thread":
                 runFlag = false;
