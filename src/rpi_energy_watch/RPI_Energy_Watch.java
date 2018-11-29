@@ -29,7 +29,7 @@ public class RPI_Energy_Watch {
     static BufferedReader input = null;
     static PrintWriter output = null;
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
     
         if (args.length==0){
             energy = new EnergyTask();
@@ -53,6 +53,7 @@ public class RPI_Energy_Watch {
             }
             
         }    
+        serversocket.close();
     }
     
     /**
