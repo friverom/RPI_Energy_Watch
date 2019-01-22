@@ -115,6 +115,11 @@ public class EnergyTask {
         return report;
     }
     
+    public String getLogEvents(){
+        String file="/home/pi/NetBeansProjects/RPI_Energy_Watch/power_log.txt";
+        return file;
+    }
+    
     private void logEvent(String event) throws IOException{
         
         //Check if file exists
@@ -172,6 +177,7 @@ public class EnergyTask {
                     Logger.getLogger(EnergyTask.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
+            rpio.releaseLock(ENERGYTASK, TASKLEVEL, GEN_RUNNING);
         }
     
     }

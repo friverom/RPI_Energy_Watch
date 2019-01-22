@@ -106,7 +106,12 @@ public class RPI_Energy_Watch {
             case "kill thread":
                 runFlag = false;
                 reply=energy.killThread();
-                break;    
+                break;   
+                
+            case "get log":
+                reply=energy.getLogEvents();
+                break;
+                
                
             default:
                 reply="invalid command";
